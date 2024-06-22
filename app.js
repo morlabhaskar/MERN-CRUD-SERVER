@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 
 app.use(
   cors({
-      origin: ["http://localhost:3000"],
+      origin: ["http://localhost:3000","https://mern-crud-client-seven.vercel.app"],
       methods: ["GET,POST,DELETE,PUT,PATCH"]
   })
 );
@@ -41,7 +41,7 @@ app.post("/addstudent", (req, res, next) => {
 });
 
 //get Data
-//http://localhost:5000/getstudent
+//https://mern-crud-server-virid.vercel.app/getstudent
 app.get("/getstudent", async (req, res, next) => {
   let studentdata;
   try {
