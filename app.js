@@ -16,6 +16,17 @@ mongoose.connect(MONGO_URL)
   .then(() => console.log("MongoDB Connected SuccessFully!"))
   .catch((err) => console.log(err));
 
+app.get("/", (req, res) => {
+    res.send("MERN CRUD OPERATIONS RUNNING!");
+});
+
+app.use(
+  cors({
+      origin: ["http://localhost:3000"],
+      methods: ["GET,POST,DELETE,PUT,PATCH"]
+  })
+);
+
 //post data
 app.post("/addstudent", (req, res, next) => {
   console.log(req.body.formData);
