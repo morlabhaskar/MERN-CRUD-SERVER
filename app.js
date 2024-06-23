@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 
 app.use(
   cors({
-      origin: ["http://localhost:3000","https://mern-crud-client-seven.vercel.app"],
+      origin: ["http://localhost:3000"],
       methods: ["GET,POST,DELETE,PUT,PATCH"]
   })
 );
