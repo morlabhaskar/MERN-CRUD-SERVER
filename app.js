@@ -6,7 +6,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 
 const app = express();
-app.use(cors());
+// app.use(cors());
 app.use(bodyParser.json());
 dotenv.config()
 const MONGO_URL = process.env.MONGO_URL;
@@ -20,12 +20,12 @@ app.get("/", (req, res) => {
     res.send("MERN CRUD OPERATIONS RUNNING!");
 });
 
-// app.use(
-//   cors({
-//       origin: ["http://localhost:3000"],
-//       methods: ["GET,POST,DELETE,PUT,PATCH"]
-//   })
-// );
+app.use(
+  cors({
+      origin: ["http://localhost:3000","https://mern-crud-client-seven.vercel.app"],
+      methods: ["GET,POST,DELETE,PUT,PATCH"]
+  })
+);
 
 //post data
 app.post("/addstudent", (req, res, next) => {
