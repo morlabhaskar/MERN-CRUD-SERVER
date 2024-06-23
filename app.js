@@ -20,12 +20,12 @@ app.get("/", (req, res) => {
     res.send("MERN CRUD OPERATIONS RUNNING!");
 });
 
-app.use(
-  cors({
-      origin: ["http://localhost:3000"],
-      methods: ["GET,POST,DELETE,PUT,PATCH"]
-  })
-);
+// app.use(
+//   cors({
+//       origin: ["http://localhost:3000"],
+//       methods: ["GET,POST,DELETE,PUT,PATCH"]
+//   })
+// );
 
 //post data
 app.post("/addstudent", (req, res, next) => {
